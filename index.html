@@ -8,66 +8,101 @@
 
 <style>
 body{
-    font-family: Arial, sans-serif;
     margin:0;
-    background:#f4f4f4;
-    color:#333;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e6f7f7, #f7f9fc);
+    color:#222;
 }
 
+/* Header */
 header{
-    background:#2c7a7b;
-    color:white;
     text-align:center;
-    padding:60px 20px;
+    padding:60px 20px 30px;
 }
 
-section{
+header h1{
+    font-size:42px;
+    margin:0;
+    color:#1f6f6f;
+}
+
+header p{
+    font-size:18px;
+    color:#555;
+    margin-top:10px;
+}
+
+/* Layout */
+.container{
     max-width:900px;
-    margin:30px auto;
+    margin:0 auto;
     padding:20px;
 }
 
+/* Card style */
 .card{
     background:white;
+    border-radius:16px;
     padding:25px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,.1);
+    margin:20px 0;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
+/* Pricing grid */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    gap:15px;
+}
+
+.price{
+    background:#f3fafa;
+    padding:15px;
+    border-radius:12px;
+    text-align:center;
+}
+
+/* Form */
 input, textarea, select{
     width:100%;
     padding:12px;
-    margin-top:5px;
+    margin-top:6px;
     margin-bottom:15px;
-    border:1px solid #ccc;
-    border-radius:5px;
-    box-sizing:border-box;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:14px;
 }
 
 button{
-    background:#2c7a7b;
+    width:100%;
+    padding:14px;
+    background:#1f6f6f;
     color:white;
     border:none;
-    padding:12px 25px;
-    border-radius:5px;
-    cursor:pointer;
+    border-radius:10px;
     font-size:16px;
+    cursor:pointer;
 }
 
 button:hover{
-    opacity:.9;
+    background:#185a5a;
 }
 
-ul{
-    padding-left:20px;
-}
-
+/* Footer */
 footer{
     text-align:center;
-    padding:20px;
-    background:#222;
-    color:white;
-    margin-top:30px;
+    padding:30px;
+    color:#666;
+    font-size:14px;
+}
+.badge{
+    display:inline-block;
+    background:#dff6f6;
+    color:#1f6f6f;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    margin-top:10px;
 }
 </style>
 </head>
@@ -76,150 +111,99 @@ footer{
 
 <header>
     <h1>216 Pet Walks</h1>
-    <p>Professional Dog Walking & Pet Care in Cleveland, Ohio</p>
+    <p>Reliable Dog Walking & Pet Care in Cleveland, Ohio</p>
+    <div class="badge">Serving the 216 Area</div>
 </header>
 
-<section>
+<div class="container">
+
     <div class="card">
-        <h2>About Us</h2>
+        <h2>About</h2>
         <p>
-            216 Pet Walks provides dependable dog walking and pet care services
-            throughout Cleveland and surrounding communities. We focus on safety,
-            exercise, and making sure every pet gets the attention they deserve.
+            Professional, safe, and friendly dog walking services in Cleveland.
+            We make sure your pets get exercise, attention, and care every visit.
         </p>
-
-        <p>
-            <strong>Owners must provide their dog's own leash and collar.</strong>
-        </p>
+        <p><strong>Note:</strong> Owners must provide leash and collar.</p>
     </div>
-</section>
 
-<section>
     <div class="card">
-        <h2>Services & Pricing</h2>
+        <h2>Pricing</h2>
 
-        <h3>Dog Walking</h3>
-        <ul>
-            <li>15 Minute Walk — $10</li>
-            <li>30 Minute Walk — $18</li>
-            <li>60 Minute Walk — $30</li>
-        </ul>
+        <div class="grid">
+            <div class="price">
+                <h3>15 min walk</h3>
+                <p>$10</p>
+            </div>
 
-        <h3>Pet Check-In Visits</h3>
-        <ul>
-            <li>15 Minutes — $10</li>
-            <li>30 Minutes — $18</li>
-        </ul>
+            <div class="price">
+                <h3>30 min walk</h3>
+                <p>$18</p>
+            </div>
 
-        <h3>Additional Dogs</h3>
-        <p>$5 per additional dog.</p>
+            <div class="price">
+                <h3>60 min walk</h3>
+                <p>$30</p>
+            </div>
 
-        <h3>Business Hours</h3>
-        <ul>
-            <li>Monday - Friday: 8:00 AM - 7:00 PM</li>
-            <li>Saturday: 9:00 AM - 5:00 PM</li>
-            <li>Sunday: By Appointment</li>
-        </ul>
-
-        <h3>Requirements</h3>
-        <ul>
-            <li>Dogs must have their own leash and collar.</li>
-            <li>Dogs should be up-to-date on vaccinations.</li>
-            <li>Emergency contact information is required.</li>
-            <li>Service may be declined for aggressive behavior.</li>
-        </ul>
+            <div class="price">
+                <h3>Check-in</h3>
+                <p>$10–$18</p>
+            </div>
+        </div>
     </div>
-</section>
 
-<section>
     <div class="card">
-        <h2>Why Choose 216 Pet Walks?</h2>
-
-        <ul>
-            <li>Reliable and friendly service</li>
-            <li>Affordable pricing</li>
-            <li>Flexible scheduling</li>
-            <li>Local Cleveland-based business</li>
-            <li>Safety-first approach</li>
-            <li>Photo updates available upon request</li>
-        </ul>
+        <h2>Why Choose Us</h2>
+        <p>✔ Reliable & local</p>
+        <p>✔ Affordable pricing</p>
+        <p>✔ Safe handling of pets</p>
+        <p>✔ Flexible scheduling</p>
     </div>
-</section>
 
-<section>
     <div class="card">
-        <h2>Dog Walking Application</h2>
+        <h2>Application</h2>
 
         <form action="https://formsubmit.co/ts512807@gmail.com" method="POST">
 
-            <input type="hidden" name="_subject" value="New 216 Pet Walks Application">
+            <input type="hidden" name="_subject" value="New Pet Walk Application">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
 
-            <label>Owner Name</label>
-            <input type="text" name="Owner Name" required>
+            <label>Name</label>
+            <input type="text" name="name" required>
 
-            <label>Email Address</label>
-            <input type="email" name="Email" required>
+            <label>Email</label>
+            <input type="email" name="email" required>
 
-            <label>Phone Number</label>
-            <input type="tel" name="Phone" required>
+            <label>Phone</label>
+            <input type="tel" name="phone" required>
 
-            <label>Home Address</label>
-            <input type="text" name="Address" required>
+            <label>Address</label>
+            <input type="text" name="address" required>
 
             <label>Dog Name</label>
-            <input type="text" name="Dog Name" required>
+            <input type="text" name="dog_name" required>
 
-            <label>Dog Breed</label>
-            <input type="text" name="Dog Breed" required>
-
-            <label>Dog Age</label>
-            <input type="text" name="Dog Age">
-
-            <label>Dog Weight</label>
-            <input type="text" name="Dog Weight">
-
-            <label>Number of Dogs</label>
-            <input type="number" name="Number of Dogs" min="1">
-
-            <label>Emergency Contact</label>
-            <input type="text" name="Emergency Contact">
-
-            <label>Preferred Walk Times</label>
-            <input type="text" name="Preferred Walk Times">
-
-            <label>Service Requested</label>
-            <select name="Service Requested">
-                <option>15 Minute Walk ($10)</option>
-                <option>30 Minute Walk ($18)</option>
-                <option>60 Minute Walk ($30)</option>
-                <option>15 Minute Pet Check-In ($10)</option>
-                <option>30 Minute Pet Check-In ($18)</option>
+            <label>Service</label>
+            <select name="service">
+                <option>15 min walk ($10)</option>
+                <option>30 min walk ($18)</option>
+                <option>60 min walk ($30)</option>
+                <option>Check-in</option>
             </select>
 
-            <label>Additional Notes</label>
-            <textarea name="Notes" rows="5"></textarea>
-
-            <label>
-                <input type="checkbox" required>
-                I understand I must provide my dog's own leash and collar.
-            </label>
-
-            <br><br>
+            <label>Notes</label>
+            <textarea name="notes"></textarea>
 
             <button type="submit">Submit Application</button>
-
         </form>
     </div>
-</section>
+
+</div>
 
 <footer>
-    <p>216 Pet Walks | Cleveland, Ohio</p>
-    <p>Email: ts512807@gmail.com</p>
+    © 2026 216 Pet Walks • Cleveland, Ohio • ts512807@gmail.com
 </footer>
 
 </body>
 </html>
 ```
-
